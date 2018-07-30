@@ -37,7 +37,7 @@ Each pipeline component must accept a generator as the first parameter.
 
 1. Add is_datasource parameter so source only generators do not require an input generator parameter.  Something like:
 ```python
->>> @GeneratorPipeline(is_datasource)
+>>> @GeneratorPipeline(is_datasource=True)
 ... def nums(max):  # Note the parameter 'gen' is no longer required
 ...     yield from range(1, max+1)
 ```
